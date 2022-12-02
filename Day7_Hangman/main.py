@@ -12,6 +12,7 @@
 
 import json
 import random
+from hangman_art import stages, logo
 
 # @ This script was created to add words length as a value in the initial json file
 # with open("Day7_Hangman/words_english.json", "r+") as file:
@@ -21,62 +22,8 @@ import random
 #     file.seek(0)
 #     json.dump(data, file, indent=4)
 #     file.truncate()
-stages = ['''
-  +---+
-  |   |
-  O   |
- /|\  |
- / \  |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
- /    |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|   |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
-  |   |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
-      |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-      |
-      |
-      |
-      |
-=========
-''']
+
+print(logo)
 
 level = input("Please choose a level: easy, medium or hard\n")
 
@@ -107,15 +54,15 @@ while not end_game:
     for position in range(len(random_word)):
         if random_word[position] == guess:
             display[position] = guess
-        
-    if lives == 0:
-        print(stages[0])
-        print("You lose!!!")
-        break
+            print(f"New letter found: {guess}")
     
-    print(random_word)
-    print(display)
     print(stages[lives])
+    print(f"{' '.join(display)}")
+    print()
+    
+    if lives == 0:
+        print(f"You lose!!! The word was {random_word}")
+        end_game = True
 
     if "_" not in display and not lives == 0:
         end_game = True
