@@ -13,7 +13,6 @@
 import json
 import random
 from hangman_art import stages, logo
-
 # @ This script was created to add words length as a value in the initial json file
 # with open("Day7_Hangman/words_english.json", "r+") as file:
 #     data = json.load(file)
