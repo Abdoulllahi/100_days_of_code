@@ -47,7 +47,7 @@ for _ in range(len(random_word)):
 
 while not end_game:
     guess = input("Guess a letter: ").lower()
-
+    os.system("clear")
     if guess not in random_word or guess in display:
         lives -= 1
         
