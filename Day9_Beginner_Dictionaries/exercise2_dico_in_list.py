@@ -1,3 +1,11 @@
+'''
+ # @ Author: Abdou Lahi DIOP
+ # @ Create Time: 2022-12-05 20:37:31
+ # @ Modified by: Abdou Lahi DIOP
+ # @ Modified time: 2022-12-05 22:27:33
+ # @ Description:
+ '''
+
 travel_log = [
 {
   "country": "France",
