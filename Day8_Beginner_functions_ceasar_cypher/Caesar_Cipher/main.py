@@ -5,9 +5,12 @@
  # @ Modified time: 2022-12-04 23:11:21
  # @ Description:
  '''
+ 
+from art import logo
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
             'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
+print(logo)
 direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
 text = input("Type your message:\n").lower()
 shift = int(input("Type the shift number:\n"))
@@ -72,12 +75,23 @@ shift = int(input("Type the shift number:\n"))
 #TODO-1: Combine the encrypt() and decrypt() functions into a single function called caesar().
 #TODO-2: Call the caesar() function, passing over the 'text', 'shift' and 'direction' values.
 
+
+### User experience and improvements
+#TODO-1: Import and print the logo from art.py when the program starts.
+#TODO-3: What happens if the user enters a number/symbol/space?
+    #Can you fix the code to keep the number/symbol/space when the text is encoded/decoded?
+    #e.g. start_text = "meet me at 3"
+    #end_text = "•••• •• •• 3"
+
 def caesar(start_text, shift_amount, cipher_direction):
     final_text = ""
     if cipher_direction == "decode":
         shift_amount *= -1
     for letter in start_text:
-        final_letter = alphabet[(alphabet.index(letter) + shift_amount) % 26]
+        if letter in alphabet:
+            final_letter = alphabet[(alphabet.index(letter) + shift_amount) % 26]
+        else:
+            final_letter = letter
         final_text += final_letter
     print(f"The {cipher_direction}d text is : {final_text}")
 
