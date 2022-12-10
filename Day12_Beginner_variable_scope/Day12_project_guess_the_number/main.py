@@ -1,3 +1,11 @@
+'''
+ # @ Author: Abdou Lahi DIOP
+ # @ Create Time: 2022-12-09 22:32:02
+ # @ Modified by: Abdou Lahi DIOP
+ # @ Modified time: 2022-12-10 23:31:02
+ # @ Description:
+ '''
+
 from random import randint
 from art import logo
 
