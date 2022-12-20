@@ -19,4 +19,7 @@ from quiz_brain import QuizBrain
 question_bank = [Question(text = question["text"], answer = question["answer"])
                  for question in question_data]
 quiz = QuizBrain(question_list = question_bank)
-quiz.next_question()
+
+
+while quiz.still_has_question():
+    quiz.next_question()
