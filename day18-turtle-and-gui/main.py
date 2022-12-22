@@ -12,6 +12,7 @@ import turtle as t
 
 turtle = t.Turtle()
 t.colormode(255)
+turtle.speed(0)
 
 # turtle.hideturtle()
 # for _ in range(25):
@@ -22,9 +23,9 @@ t.colormode(255)
 # for _ in range(4):
 #     turtle.forward(100)
 #     turtle.left(90)
-colours = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "LightSeaGreen", "wheat", "SlateGray",
-           "SeaGreen"]
-directions = [0, 90, 180, 270]
+# colours = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "LightSeaGreen", "wheat", "SlateGray",
+#            "SeaGreen"]
+# directions = [0, 90, 180, 270]
 
 # TODO: draw different shapes
 # def draw_figure(sides):
@@ -53,12 +54,24 @@ def random_color():
     return (r, g, b)
 
 
-turtle.pensize(10)
-for _ in range(200):
-    turtle.color(random_color())
-    turtle.forward(30)
-    turtle.setheading(random.choice(directions))
+# turtle.pensize(10)
+# for _ in range(200):
+#     turtle.color(random_color())
+#     turtle.forward(30)
+#     turtle.setheading(random.choice(directions))
 
+
+#TODO: Spirograph
+
+
+def draw_spirograph(size_of_gap):
+    for _ in range(int(360 / size_of_gap)):
+        turtle.color(random_color())
+        turtle.circle(100)
+        turtle.setheading(turtle.heading() + size_of_gap)
+
+
+draw_spirograph(2)
 
 screen = t.Screen()
 screen.exitonclick()
