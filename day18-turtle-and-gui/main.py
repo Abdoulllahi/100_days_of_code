@@ -1,9 +1,17 @@
+'''
+ # @ Author: Abdou Lahi DIOP
+ # @ Create Time: 2022-12-21 14:41:27
+ # @ Modified by: Abdou Lahi DIOP
+ # @ Modified time: 2022-12-22 15:05:07
+ # @ Description:
+ '''
+
 import random
-from turtle import Turtle, Screen
+import turtle as t
 
 
-turtle = Turtle()
-
+turtle = t.Turtle()
+t.colormode(255)
 
 # turtle.hideturtle()
 # for _ in range(25):
@@ -14,11 +22,11 @@ turtle = Turtle()
 # for _ in range(4):
 #     turtle.forward(100)
 #     turtle.left(90)
-colours = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "LightSeaGreen", "wheat", "SlateGray", 
+colours = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "LightSeaGreen", "wheat", "SlateGray",
            "SeaGreen"]
 directions = [0, 90, 180, 270]
 
-#TODO: draw differenr shapes
+# TODO: draw different shapes
 # def draw_figure(sides):
 #     turtle.shape()
 #     # turtle.color("black", "red")
@@ -27,7 +35,7 @@ directions = [0, 90, 180, 270]
 #         turtle.forward(100)
 #         turtle.right(angle)
 #     # screen = Screen()
-#     # screen.exitonclick()        
+#     # screen.exitonclick()
 
 # for shape_side_n in range(3, 10):
 #     turtle.color(random.choice(colours))
@@ -35,13 +43,22 @@ directions = [0, 90, 180, 270]
 
 # draw_figure(10)
 
-#TODO: random walk
+# TODO: random walk
+
+
+def random_color():
+    r = random.randint(0, 255)
+    g = random.randint(0, 255)
+    b = random.randint(0, 255)
+    return (r, g, b)
+
+
 turtle.pensize(10)
 for _ in range(200):
-    turtle.color(random.choice(colours))
+    turtle.color(random_color())
     turtle.forward(30)
     turtle.setheading(random.choice(directions))
 
 
-screen = Screen()
-screen.exitonclick()   
+screen = t.Screen()
+screen.exitonclick()
