@@ -16,19 +16,32 @@ turtle = Turtle()
 #     turtle.left(90)
 colours = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "LightSeaGreen", "wheat", "SlateGray", 
            "SeaGreen"]
+directions = [0, 90, 180, 270]
 
-def draw_figure(sides):
-    turtle.shape()
-    # turtle.color("black", "red")
-    for _ in range(sides):
-        angle = 360 / sides
-        turtle.forward(100)
-        turtle.right(angle)
-    # screen = Screen()
-    # screen.exitonclick()        
+#TODO: draw differenr shapes
+# def draw_figure(sides):
+#     turtle.shape()
+#     # turtle.color("black", "red")
+#     for _ in range(sides):
+#         angle = 360 / sides
+#         turtle.forward(100)
+#         turtle.right(angle)
+#     # screen = Screen()
+#     # screen.exitonclick()        
 
-for shape_side_n in range(3, 10):
+# for shape_side_n in range(3, 10):
+#     turtle.color(random.choice(colours))
+#     draw_figure(shape_side_n)
+
+# draw_figure(10)
+
+#TODO: random walk
+turtle.pensize(10)
+for _ in range(200):
     turtle.color(random.choice(colours))
-    draw_figure(shape_side_n)
+    turtle.forward(30)
+    turtle.setheading(random.choice(directions))
 
-draw_figure(10)
+
+screen = Screen()
+screen.exitonclick()   
