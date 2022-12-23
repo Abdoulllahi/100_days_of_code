@@ -1,10 +1,10 @@
-'''
+"""
  # @ Author: Abdou Lahi DIOP
  # @ Create Time: 2022-12-21 14:41:27
  # @ Modified by: Abdou Lahi DIOP
- # @ Modified time: 2022-12-22 15:05:07
+ # @ Modified time: 2022-12-23 20:36:41
  # @ Description:
- '''
+ """
 
 import random
 import turtle as t
@@ -61,7 +61,7 @@ def random_color():
 #     turtle.setheading(random.choice(directions))
 
 
-#TODO: Spirograph
+# TODO: Spirograph
 
 
 def draw_spirograph(size_of_gap):
