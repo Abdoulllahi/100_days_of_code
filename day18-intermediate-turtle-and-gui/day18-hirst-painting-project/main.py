@@ -2,7 +2,7 @@
  # @ Author: Abdou Lahi DIOP
  # @ Create Time: 2022-12-22 15:51:55
  # @ Modified by: Abdou Lahi DIOP
- # @ Modified time: 2022-12-23 21:01:47
+ # @ Modified time: 2022-12-24 20:41:31
  # @ Description:
  """
 import turtle as t
