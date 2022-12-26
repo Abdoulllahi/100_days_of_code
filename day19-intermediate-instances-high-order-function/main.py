@@ -13,7 +13,7 @@ screen = Screen()
 
 
 def move_forward():
-    tim.forward(50)
+    tim.forward(100)
 
 
 screen.listen()
