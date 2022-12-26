@@ -2,7 +2,7 @@
  # @ Author: Abdou Lahi DIOP
  # @ Create Time: 2022-12-24 20:57:46
  # @ Modified by: Abdou Lahi DIOP
- # @ Modified time: 2022-12-24 21:00:49
+ # @ Modified time: 2022-12-26 21:22:41
  # @ Description:
  """
 
@@ -16,7 +16,6 @@ def move_forward():
     tim.forward(50)
 
 
-
 def move_backward():
     tim.backward(50)
 
@@ -24,24 +23,25 @@ def move_backward():
 def turn_left():
     new_heading = tim.heading() + 10
     tim.setheading(new_heading)
-    
+
 
 def turn_right():
     new_heading = tim.heading() - 10
     tim.setheading(new_heading)
-    
-    
+
+
 def clear():
     tim.clear()
     tim.penup()
     tim.home()
     tim.pendown()
 
+
 # screen.listen()
 # screen.onkey(fun=move_forward, key="space")
 # screen.exitonclick()
 
-#TODO: Z = Forwards, B = Backwards, A = Counter-Clockwise, D = Clockwise, C = Clear Drawing
+# TODO: Z = Forwards, B = Backwards, A = Counter-Clockwise, D = Clockwise, C = Clear Drawing
 
 screen.listen()
 screen.onkey(fun=move_forward, key="z")
